@@ -1,0 +1,13 @@
+server:
+  port: 8765
+
+spring:
+  application:
+    name: ApiGateway
+  cloud:
+    gateway:
+      routes:
+        - id: DataBase
+          uri: http://localhost:8068/
+          predicates:
+            - Path=/db/**
