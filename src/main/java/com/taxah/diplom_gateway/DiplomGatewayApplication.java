@@ -18,6 +18,8 @@ public class DiplomGatewayApplication {
         return builder.routes()
                 .route("DataBase",r->r.path("/db/**")
                         .uri("http://localhost:8068/"))
+                .route("CalculateSession", r->r.path("/calc/**")
+                        .uri("http://localhost:8070/"))
                 .build();
     }
 }
