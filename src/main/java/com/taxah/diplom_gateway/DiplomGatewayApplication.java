@@ -6,6 +6,9 @@ import org.springframework.cloud.gateway.route.RouteLocator;
 import org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder;
 import org.springframework.context.annotation.Bean;
 
+/**
+ * The main class of the application. It is used to start the application.
+ */
 @SpringBootApplication
 public class DiplomGatewayApplication {
 
@@ -13,6 +16,11 @@ public class DiplomGatewayApplication {
         SpringApplication.run(DiplomGatewayApplication.class, args);
     }
 
+    /**
+     * Method for creating routes for the gateway.
+     * @param builder - the builder for creating routes.
+     * @return - the created routes.
+     */
     @Bean
     public RouteLocator customRouteLocator(RouteLocatorBuilder builder){
         return builder.routes()
