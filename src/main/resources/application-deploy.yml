@@ -8,16 +8,16 @@ spring:
     gateway:
       routes:
         - id: DataBase
-          uri: http://localhost:8068/
+          uri: http://database:8068/
           predicates:
             - Path=/db/**
         - id: CalculateSession
-          uri: http://localhost:8070/
+          uri: http://calculate:8070/
           predicates:
             - Path=/calc/**
 
 path:
-  database: localhost
-  calculate: localhost
+  database: database
+  calculate: calculate
 
 
